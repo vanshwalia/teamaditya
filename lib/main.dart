@@ -1,5 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:teamaditya/constants.dart';
+import 'package:teamaditya/screens/bottomnavigation.dart';
 import 'screens/homepage.dart';
 
 void main() async {
@@ -16,9 +18,56 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Team Aditya',
-      theme: ThemeData.dark(),
-      home: const HomePage(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          primaryColor: kPrimaryColor,
+          outlinedButtonTheme: OutlinedButtonThemeData(
+            style: ButtonStyle(
+              side: MaterialStateProperty.all(
+                  BorderSide(color: kPrimaryColor, width: 1.5)),
+              overlayColor: MaterialStateProperty.resolveWith<Color>(
+                (Set<MaterialState> states) {
+                  if (states.contains(MaterialState.hovered)) return kRed;
+                  if (states.contains(MaterialState.focused) ||
+                      states.contains(MaterialState.pressed)) return kRed;
+                  return kAccentColor; // Defer to the widget's default.
+                },
+              ),
+              foregroundColor: MaterialStateColor.resolveWith(
+                (Set<MaterialState> states) {
+                  if (states.contains(MaterialState.hovered))
+                    return kPrimaryColor;
+                  if (states.contains(MaterialState.focused) ||
+                      states.contains(MaterialState.pressed))
+                    return kPrimaryColor;
+                  return kAccentColor; // Defer to the widget's default.
+                },
+              ),
+              shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0))),
+            ),
+          ),
+          textButtonTheme: TextButtonThemeData(
+            style: ButtonStyle(
+              side: MaterialStateProperty.all(
+                  BorderSide(color: kAccentColor, width: 1.5)),
+              backgroundColor:
+                  MaterialStateColor.resolveWith((states) => kAccentColor),
+              overlayColor: MaterialStateProperty.resolveWith<Color>(
+                (Set<MaterialState> states) {
+                  if (states.contains(MaterialState.hovered)) return kRed;
+                  if (states.contains(MaterialState.focused) ||
+                      states.contains(MaterialState.pressed)) return kRed;
+                  return kAccentColor; // Defer to the widget's default.
+                },
+              ),
+              foregroundColor:
+                  MaterialStateColor.resolveWith((states) => kPrimaryColor),
+              shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0))),
+            ),
+          )),
+      home: const BottomNavigation(),
     );
   }
 }
-
