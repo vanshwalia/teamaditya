@@ -1,16 +1,7 @@
-# teamaditya
+# Aditya’s Community
+Hi 👋 I am Aditya Thakur. I am a content creator and [make videos on Flutter, Python, and other technologies.](https://www.youtube.com/channel/UChCAJNpMwoEUYCsE_eSyU4w) For me, a community is a mode of connecting with my audience better, also enable collaboration and share ideas, receive feedback and grow.
 
-A new Flutter project.
+**Visit our website made in Flutter 💙 at:** https://teamaditya.co/#/
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Demo
+https://user-images.githubusercontent.com/53579386/129788259-256ea650-82b9-4822-ab8d-fc43705b8f1a.mp4
