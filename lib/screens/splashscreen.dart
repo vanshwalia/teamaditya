@@ -20,10 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   onDoneLoading() async {
-    Navigator.pushNamed(
-      context,
-      '/home',
-    );
+    Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
   }
 
   @override
