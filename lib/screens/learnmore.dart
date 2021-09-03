@@ -14,32 +14,12 @@ class LearnMore extends StatefulWidget {
 
 class _LearnMoreState extends State<LearnMore> {
   Constants _constants = Constants();
-  // late Widget _iframeWidget;
-  // final IFrameElement _iframeElement = IFrameElement();
-  //
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   _iframeElement.src = 'https://adityathakur.substack.com/embed';
-  //   _iframeElement.style.border = 'none';
-  //
-  //   // ignore: undefined_prefixed_name
-  //   ui.platformViewRegistry.registerViewFactory(
-  //     'iframeElement',
-  //         (int viewId) => _iframeElement,
-  //   );
-  //
-  //   _iframeWidget = HtmlElementView(
-  //     key: UniqueKey(),
-  //     viewType: 'iframeElement',
-  //   );
-  // }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: kBlue,
+        backgroundColor: kPrimaryColor,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -48,54 +28,7 @@ class _LearnMoreState extends State<LearnMore> {
             Spacer(),
             Spacer(),
             BlogWidget(url: 'url', imagepath: 'assets/aditya.png'),
-            // GestureDetector(
-            //   onTap: (){
-            //     _constants.launchInBrowser('https://adityathakurxd.medium.com/adityas-community-why-what-ae74f2af4680');
-            //   },
-            //   child: Container(
-            //     decoration: const BoxDecoration(
-            //         color: Colors.white,
-            //         borderRadius: BorderRadius.all(Radius.circular(8)),
-            //         boxShadow: [
-            //           BoxShadow(
-            //             color: Colors.grey,
-            //             blurRadius: 5.0,
-            //           ),
-            //         ]),
-            //     width: 400,
-            //     height: 150,
-            //     child: Row(
-            //       children: [
-            //         Container(
-            //           height: 150,
-            //           width: 150,
-            //           child: Padding(
-            //             padding: const EdgeInsets.all(10.0),
-            //             child: Image(
-            //               image: AssetImage(
-            //                 'assets/aditya.png'
-            //               ),
-            //             ),
-            //           ),
-            //         ),
-            //         Column(
-            //           crossAxisAlignment: CrossAxisAlignment.start,
-            //           children: [
-            //             SizedBox(
-            //               height: 10,
-            //             ),
-            //             Text('Aditya’s Community\nWhy? What?', style: kTitleText,),
-            //             SizedBox(
-            //               height: 10,
-            //             ),
-            //             Text('"For me, a community is a mode of\nconnecting with my audience better,\nalso enable collaboration and share ideas,\nreceive feedback and grow."\nRead the full blog', style: kSubtitleText,),
-            //           ],
-            //         )
-            //       ],
-            //     ),
-            //   ),
-            // ),
-            Spacer(),
+            const Spacer(),
             GestureDetector(
               onTap: (){
                 _constants.launchInBrowser('https://www.geeksforgeeks.org/flutter-ing-away-towards-his-dreams/');
@@ -116,8 +49,8 @@ class _LearnMoreState extends State<LearnMore> {
                   children: [
                     Container(
                       height: 150,
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(10.0),
                         child: Image(
                           image: AssetImage(
                               'assets/gfg.png'
@@ -128,11 +61,11 @@ class _LearnMoreState extends State<LearnMore> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Text('FLUTTER-ing Away\nTowards His Dreams!', style: kTitleText,),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Text('"In his two years of college as a\nComputer Science student, he has built a\ncommunity of 3.5K+ people on his\nYouTube channel."\nRead the full blog', style: kSubtitleText,),
@@ -142,8 +75,8 @@ class _LearnMoreState extends State<LearnMore> {
                 ),
               ),
             ),
-            Spacer(),
-            Spacer(),
+            const Spacer(),
+            const Spacer(),
           ],
         ),
       ),

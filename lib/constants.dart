@@ -2,16 +2,62 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-Color kRed = const Color(0xFFF1444E);
-Color kBlue = const Color(0xFF8CBEFE);
+Color kRed = const Color(0xFFDA0037);
 Color kPeach = const Color(0xFFFFCEC0);
 Color kYellow = const Color(0xFFF7B200);
 
-Color kPrimaryColor = Colors.white;
-Color kAccentColor = Colors.black;
+Color kPrimaryColor = Color(0xFFEDEDED);
+Color kAccentColor = Color(0xFF171717);
 
-TextStyle kTitleText = GoogleFonts.ubuntu(fontSize: 20.0, fontWeight: FontWeight.bold);
-TextStyle kSubtitleText = GoogleFonts.ubuntu(fontSize: 12.0,);
+TextStyle kTitleText =
+    GoogleFonts.ubuntu(fontSize: 20.0, fontWeight: FontWeight.bold);
+TextStyle kSubtitleText = GoogleFonts.ubuntu(
+  fontSize: 12.0,
+);
+
+OutlinedButtonThemeData outlinedButtonThemeData = OutlinedButtonThemeData(
+  style: ButtonStyle(
+    side:
+        MaterialStateProperty.all(BorderSide(color: kPrimaryColor, width: 1.5)),
+    overlayColor: MaterialStateProperty.resolveWith<Color>(
+      (Set<MaterialState> states) {
+        if (states.contains(MaterialState.hovered)) return kRed;
+        if (states.contains(MaterialState.focused) ||
+            states.contains(MaterialState.pressed)) return kRed;
+        return kAccentColor; // Defer to the widget's default.
+      },
+    ),
+    foregroundColor: MaterialStateColor.resolveWith(
+      (Set<MaterialState> states) {
+        if (states.contains(MaterialState.hovered)) return kPrimaryColor;
+        if (states.contains(MaterialState.focused) ||
+            states.contains(MaterialState.pressed)) return kPrimaryColor;
+        return kAccentColor; // Defer to the widget's default.
+      },
+    ),
+    shape: MaterialStateProperty.all(
+        RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0))),
+  ),
+);
+
+TextButtonThemeData textButtonThemeData = TextButtonThemeData(
+  style: ButtonStyle(
+    side:
+        MaterialStateProperty.all(BorderSide(color: kAccentColor, width: 1.5)),
+    backgroundColor: MaterialStateColor.resolveWith((states) => kAccentColor),
+    overlayColor: MaterialStateProperty.resolveWith<Color>(
+      (Set<MaterialState> states) {
+        if (states.contains(MaterialState.hovered)) return kRed;
+        if (states.contains(MaterialState.focused) ||
+            states.contains(MaterialState.pressed)) return kRed;
+        return kAccentColor; // Defer to the widget's default.
+      },
+    ),
+    foregroundColor: MaterialStateColor.resolveWith((states) => kPrimaryColor),
+    shape: MaterialStateProperty.all(
+        RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0))),
+  ),
+);
 
 class Constants {
   Future<void> launchInBrowser(String url) async {
@@ -27,4 +73,3 @@ class Constants {
     }
   }
 }
-
