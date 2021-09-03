@@ -4,6 +4,7 @@ import 'package:teamaditya/constants.dart';
 import 'package:teamaditya/screens/homepage.dart';
 import 'package:teamaditya/screens/projects.dart';
 import 'package:teamaditya/screens/sessions.dart';
+import 'package:teamaditya/screens/splashscreen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
         textButtonTheme: textButtonThemeData,
       ),
       routes: {
-        '/': (context) => const HomePage(),
+        '/': (context) => SplashScreen(),
+        '/home': (context) => const HomePage(),
         '/sessions': (context) => const SessionsScreen(),
         '/projects': (context) => const ProjectsScreen(),
       },
