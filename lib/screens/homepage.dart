@@ -26,9 +26,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: kLightBlue,
+        backgroundColor: kPrimaryColor,
         appBar: AppBar(
-          backgroundColor: kLightBlue,
+          backgroundColor: kAccentColor,
           title: Container(
             height: 50,
             child: const Image(
