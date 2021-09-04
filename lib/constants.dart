@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-Color kPrimaryColor = Color(0xFFFBE0C4);
+Color kPrimaryColor = Colors.white;
 Color kLightBlue = Color(0xFF8AB6D6);
 Color kAccentColor = Color(0xFF0061A8);
 Color kRed = const Color(0xFFDA0037);

@@ -1,11 +1,11 @@
 {
-    "name": "teamaditya",
+    "name": "Team Aditya",
     "short_name": "teamaditya",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "We have mentors to help, devs to network with and memes!",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
