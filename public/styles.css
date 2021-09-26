@@ -17,16 +17,12 @@ h3{
     font-family: "Montserrat";
 }
 
-h3:hover{
-    color: #0277BD;
-}
-
 p{
     color: #8f8f8f;
 }
 
 .container-fluid {
-    padding: 3% 10%;
+    padding: 3% 8%;
 }
 
 /* Navigation Bar */
@@ -61,7 +57,7 @@ p{
 /* Features Section */
 
 #features{
-    padding: 7% 11%;
+    padding: 3% 11%;
 }
 
 .feature-box{
@@ -73,6 +69,8 @@ p{
     /* color: #0277BD; */
     margin-bottom: 1rem;
 }
+
+
 
 .icon:hover{
     color: #0277BD;
