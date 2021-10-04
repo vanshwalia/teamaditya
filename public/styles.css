@@ -150,3 +150,19 @@ p {
 .social-icon {
     margin: 20px 10px;
 }
+#cta{
+
+    background-color:coral;
+    text-align: center;
+
+}
+
+#h3tag{
+
+    color: #fff;
+}
+
+#footer{
+
+    text-align: center;
+}
